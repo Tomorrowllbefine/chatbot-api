@@ -71,19 +71,19 @@ public class ApiTest {
     public void test_chatGPT() throws IOException  {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         // 设置代理地址和端口号
-        String proxyHost = "127.0.0.1";
-        int proxyPort = 7890;
+//        String proxyHost = "127.0.0.1";
+//        int proxyPort = 7890;
+//
+//        // 设置代理
+//        HttpHost proxy = new HttpHost(proxyHost, proxyPort);
+//        RequestConfig config = RequestConfig.custom()
+//                .setProxy(proxy)
+//                .build();
 
-        // 设置代理
-        HttpHost proxy = new HttpHost(proxyHost, proxyPort);
-        RequestConfig config = RequestConfig.custom()
-                .setProxy(proxy)
-                .build();
-
-        HttpPost post = new HttpPost("https://kkakoka.cn/v1/completions");
-        post.setConfig(config);
+        HttpPost post = new HttpPost("https://open.aiproxy.xyz/v1/completions");
+        //post.setConfig(config);
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization","Bearer API秘钥 xxx");
+        post.addHeader("Authorization","Bearer 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");
         String jsonParam = "{\n" +
                 "    \"prompt\": \"什么是分布式CAS策略？\",\n" +
                 "    \"model\": \"text-embedding-3-small\"\n" +
@@ -93,8 +93,7 @@ public class ApiTest {
 
         StringEntity stringEntity = new StringEntity(jsonParam,ContentType.create("text/json", "UTF-8"));
         post.setEntity(stringEntity);
-        //CloseableHttpResponse response = httpClient.execute(post);
-        HttpResponse response = httpClient.execute(post);
+        CloseableHttpResponse response = httpClient.execute(post);
         System.out.println(response.toString());
         if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK){
             String res = EntityUtils.toString(response.getEntity());
