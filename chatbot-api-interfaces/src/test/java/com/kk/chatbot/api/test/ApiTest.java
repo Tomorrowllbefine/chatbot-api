@@ -83,7 +83,7 @@ public class ApiTest {
         HttpPost post = new HttpPost("https://kkakoka.cn/v1/completions");
         post.setConfig(config);
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization","Bearer sk-xxx");
+        post.addHeader("Authorization","Bearer API秘钥 xxx");
         String jsonParam = "{\n" +
                 "    \"prompt\": \"什么是分布式CAS策略？\",\n" +
                 "    \"model\": \"text-embedding-3-small\"\n" +
@@ -118,7 +118,7 @@ public class ApiTest {
 //
 //
 //    private ChatCompletionResult createChatCompletion(List<ChatMessage> messages){
-//        OpenAiService service = new OpenAiService("sk-xxx");
+//        OpenAiService service = new OpenAiService("API秘钥 xxx");
 //        ChatCompletionRequest build = ChatCompletionRequest.builder()
 //                .model("gpt-3.5-turbo")
 //                .temperature(0.0D)
@@ -134,7 +134,7 @@ public class ApiTest {
 
         HttpPost post = new HttpPost("https://kkakoka.cn/v1/completions");
         post.addHeader("Content-Type", "application/json");
-        post.addHeader("Authorization", "Bearer sk-xxx");
+        post.addHeader("Authorization", "Bearer API秘钥 xxx");
 
         String paramJson = "{\"model\": \"text-davinci-003\", \"prompt\": \"帮我写一个java冒泡排序\", \"temperature\": 0, \"max_tokens\": 1024}";
 

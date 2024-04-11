@@ -27,7 +27,7 @@ public class ApiTest1 {
 
 //    public static void main(String[] args) {
 //        OpenAiStreamClient client = OpenAiStreamClient.builder()
-//                .apiKey(Arrays.asList("sk-xxx"))
+//                .apiKey(Arrays.asList("API秘钥 xxx"))
 //                //自定义key的获取策略：默认KeyRandomStrategy
 //                .keyStrategy(new KeyRandomStrategy())
 //                //.keyStrategy(new FirstKeyStrategy())
@@ -62,7 +62,7 @@ public class ApiTest1 {
                 .readTimeout(30, TimeUnit.SECONDS)//自定义超时时间
                 .build();
         OpenAiStreamClient client = OpenAiStreamClient.builder()
-                .apiKey(Arrays.asList("sk-xxx"))
+                .apiKey(Arrays.asList("API秘钥 xxx"))
                 //自定义key的获取策略：默认KeyRandomStrategy
                 .keyStrategy(new KeyRandomStrategy())
                 //.keyStrategy(new FirstKeyStrategy())
