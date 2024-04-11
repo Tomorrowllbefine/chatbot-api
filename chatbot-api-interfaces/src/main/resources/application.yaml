@@ -3,7 +3,7 @@ server:
 
 chatbot-api:
   cookie: Idea-2869c094=1798a07d-504d-4a0d-988a-0878c98f5b00; JSESSIONID=5EF1D15E88955743D766980F4C7F42C1
-  openAiKey: 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
+  openAiKey: sk-xxx
 
 spring:
   output:
